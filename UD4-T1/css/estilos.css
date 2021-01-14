@@ -1,0 +1,106 @@
+body{
+    
+    font-family: 'Courier New', Courier, monospace;
+}
+header{
+    background-color: lightgray;
+    width: 100%;
+    color: white;
+    
+}
+        header h1{
+            margin: 0;
+            
+        }
+        header h2{
+            font-size: 1em;
+        }
+h1,h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p{
+    font-size: 0.8em;
+}
+ul li a{
+    color: black;
+}
+
+    
+nav{
+    float: left;
+    width: 15%;
+    font-size: 1.5em;
+      
+}
+    nav ul{
+        list-style: none;
+        
+    }
+        nav ul li:hover{
+            background-color: #a9a9a9 ;
+            
+        }
+        nav ul li a:hover{
+            color: white;
+        }
+#content{
+    float: left;
+    width: 80%;   
+}
+.centrar{
+    text-align: center;
+    margin: 0;
+}
+
+
+#left{
+    float: left;
+    width: 98%;
+    
+}
+    #left ul{
+        
+        list-style-type: circle;
+        display: inline-block;
+        
+    }
+        #left ul li:hover{
+            background-color: black;
+        }
+        #left ul li a:hover{
+            color: white;
+            text-decoration: none;
+        }
+
+#right{
+    float: left;
+}
+    #right ul{
+        display: inline-block;
+
+
+    }
+        #right ul li:hover{
+            background-color: black;
+        }
+        #right ul li a:hover{
+            color: white;
+            text-decoration: none;
+        }
+
+footer{
+    clear: both;
+    font-weight: bold;
+    
+    
+}
+    footer h4{
+        float: left;
+        
+        
+         
+    }
+    footer div{
+        float: right;
+        margin-top: 25px;
+    }

@@ -1,106 +1,163 @@
-body{
-    
-    font-family: 'Courier New', Courier, monospace;
+@import url("normalize.css");
+/* en lugar de enlazar con el css normalize.css en el html vamos a emplear la importación a este css
+de forma que con enlazar un css en el html tendremos todas las hojas de estilos que emplearemos*/
+body {
+  /* quitamos también el padding que pueda tener el navagador ya que con normalize no lo ha realizado*/
+  padding: 0em;
+  font-family: "Courier New", Courier, monospace;
 }
-header{
-    background-color: lightgray;
-    width: 100%;
-    color: white;
-    
+
+header {
+  background-color: lightgray;
+ /* width: 100%; no es necesario, lo que si necesitamos es definir el margin y padding para separarlo del contenido */
+  margin: 0em 0em 1em 0em; 
+  padding: 0em 1em;
+  color: white;
 }
-        header h1{
-            margin: 0;
-            
-        }
-        header h2{
-            font-size: 1em;
-        }
+/* ya lo hereda del padre
+header h1 {
+  margin: 0;
+}*/
+
+header h2 {
+  font-size: 1em;
+}
+/*
 h1,h2{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+a pesar de no usar más que h1 y h2 pondremos la regla para todos ya que en el futuro podemos necesitarlos,
+también quitamos los margenes y padding*/
+h1, h2, h3, h4, h5, h6 {
+  margin: 0em;
+  padding: 0em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+/* se pide para los párrafos y par las listas ordenadas y desordenadas 
 p{
     font-size: 0.8em;
+}*/
+p, ol, ul {
+  font-size: 0.8em;
 }
+/* como el color negro del texto es para todos los enlaces no especificamos ul li
 ul li a{
     color: black;
 }
+*/
+a {
+  color: #000000;
+}
 
-    
-nav{
-    float: left;
-    width: 15%;
-    font-size: 1.5em;
-      
+nav {
+  float: left;
+  width: 15%; /*
+  font-size: 1.5em; 
+  el tamaño de la letra se pedía para los li*/
 }
-    nav ul{
-        list-style: none;
-        
-    }
-        nav ul li:hover{
-            background-color: #a9a9a9 ;
-            
-        }
-        nav ul li a:hover{
-            color: white;
-        }
-#content{
-    float: left;
-    width: 80%;   
-}
-.centrar{
-    text-align: center;
-    margin: 0;
+
+/* faltaría espaciar los elementos del menú y centrar el texto, para que quede mejor quitar el margin y padding
+nav ul {
+  list-style: none;
+}*/
+
+nav ul {
+	margin: 0em;
+	padding: 0em;
+	list-style: none;
+	text-align: center;
+	line-height: 3em;
 }
 
 
-#left{
-    float: left;
-    width: 98%;
-    
+nav li {
+	font-size: 1.5em;
 }
-    #left ul{
-        
-        list-style-type: circle;
-        display: inline-block;
-        
-    }
-        #left ul li:hover{
-            background-color: black;
-        }
-        #left ul li a:hover{
-            color: white;
-            text-decoration: none;
-        }
-
-#right{
-    float: left;
+/* se pide el cambio de color de fondo al pasar sobre los enlaces no sobre los li 
+nav ul li:hover {
+  background-color: #a9a9a9;
 }
-    #right ul{
-        display: inline-block;
+nav ul li a:hover {
+  color: white;
+}*/
 
+nav a:hover {
+	text-decoration: none;
+	background-color: #a9a9a9;
+	color: #FFFFFF;
+}
 
-    }
-        #right ul li:hover{
-            background-color: black;
-        }
-        #right ul li a:hover{
-            color: white;
-            text-decoration: none;
-        }
+#content {
+  float: left;
+  width: 80%;
+}
+.centrar {
+  text-align: center;
+  margin: 0;
+}
 
-footer{
+#left {
+  float: left;
+  width: 98%;
+}
+#left ul {
+  list-style-type: circle;
+  display: inline-block;
+}
+/* sobra ya que solo se hace sobre el enlace no sobre el li 
+#left ul li:hover {
+  background-color: black;
+}*/
+/* como todos los enlaces, al pasar sobre ellos, hacen lo mismo se pone de forma general para todos los enlaces
+#left ul li a:hover {
+  color: white;
+  text-decoration: none;
+}*/
+a {
+	color: #000000;
+}
+a:hover {
+	text-decoration: none;
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+#right {
+  float: left;
+}
+/*
+sobra al ser todo general par todos los enlaces
+#right ul {
+  display: inline-block; esto ni siquiera es necesario en este ejercicio
+}
+#right ul li:hover {
+  background-color: black;
+}
+#right ul li a:hover {
+  color: white;
+  text-decoration: none;
+}*/
+/* falta el color de fondo 
+footer {
+  clear: both;
+  font-weight: bold;
+}*/
+footer {
     clear: both;
-    font-weight: bold;
-    
-    
+    background-color: #CCCCCC;
+    height: 50px;
 }
-    footer h4{
-        float: left;
-        
-        
-         
-    }
-    footer div{
-        float: right;
-        margin-top: 25px;
-    }
+/*
+footer h4 {
+  float: left;
+}*/
+footer p {
+    float: left;
+    width: 50%;
+}
+
+footer div {
+  float: right;
+   /*margin-top: 25px;*/
+}
+
